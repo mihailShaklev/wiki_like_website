@@ -1,0 +1,14 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+   Search results
+{% endblock %}
+
+{% block body %}
+    <h1>Search results:</h1>
+    <ul>
+      {% for result in results %}
+        <li><a href="http://127.0.0.1:8000/wiki/{{ result }}">{{ result }}</a></li>
+      {% endfor %}
+    </ul>
+{% endblock %}

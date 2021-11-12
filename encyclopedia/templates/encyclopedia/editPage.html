@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+  Edit Page
+{% endblock %}
+
+{% block body %}
+    <h1>Edit Page</h1>
+    <form>
+         <div class="form-group">
+           <label for="exampleFormControlInput1">Title: {{ oldTitle }}</label>
+             <input class="form-group" id="exampleFormControlInput1" name="title" value="{{ oldTitle }}" type="hidden">
+         </div>
+        <label for="exampleFormControlTextArea">Content:</label>
+        <div class="form-group">
+            <textarea class="form-group" id="exampleFormControlTextArea" name="content" rows="20" >{{ oldContent }}</textarea>
+         </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    <br>
+    <br>
+    <br>
+    </form>
+{% endblock %}
